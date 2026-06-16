@@ -1,0 +1,40 @@
+name: Build and Publish
+
+on:
+  push:
+    tags:
+      - "[0-9]*"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install build dependencies
+        run: pip install build setuptools setuptools-scm jinja2 pyyaml truststore
+
+      - name: Build templates
+        run: python tools/build_templates.py
+
+      - name: Build
+        run: python -m build --wheel
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REF_NAME: ${{ github.ref_name }}
+        run: gh release create "$REF_NAME" dist/* --title "$REF_NAME" --generate-notes
