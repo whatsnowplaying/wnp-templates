@@ -10,7 +10,32 @@ import logging
 import pathlib
 import re
 
+import yaml
+
 BUNDLED_TEMPLATE_DIR: pathlib.Path = pathlib.Path(__file__).parent / "bundled"
+
+_VENDOR_YAML: pathlib.Path = pathlib.Path(__file__).parent / "vendor.yaml"
+
+
+def _load_vendor_files() -> dict[str, str]:
+    """Return filename → URL map from the packaged vendor.yaml."""
+    if not _VENDOR_YAML.exists():
+        return {}
+    try:
+        data = yaml.safe_load(_VENDOR_YAML.read_text(encoding="utf-8"))
+        if not isinstance(data, dict):
+            return {}
+        return {
+            filename: info["url"]
+            for filename, info in data.get("vendor_dependencies", {}).items()
+            if isinstance(info, dict) and info.get("url")
+        }
+    except Exception:  # pylint: disable=broad-exception-caught
+        logging.warning("Failed to load vendor.yaml from %s", _VENDOR_YAML)
+        return {}
+
+
+VENDOR_FILES: dict[str, str] = _load_vendor_files()
 
 _TIMING_JS_TEMPLATE = """\
 <script>(function(){{
