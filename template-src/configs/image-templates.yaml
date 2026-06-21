@@ -1,0 +1,145 @@
+# yamllint disable rule:line-length
+---
+template_families:
+  artist_images:
+    base: websocket-base
+    description: "Single artist image display (banner, logo, thumbnail)"
+    common_css:
+      - obs-compatibility
+      - image-display
+    common_websocket:
+      - metadata-streaming
+
+    templates:
+      ws-artistbanner-nofade:
+        title: "Artist Banner"
+        description: "Full-width artist banner image"
+        body_layout: single-image-layout
+        display_js: single-image-display
+        image_field: artistbanner
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+      ws-artistlogo-nofade:
+        title: "Artist Logo"
+        description: "Artist logo image"
+        body_layout: single-image-layout
+        display_js: single-image-display
+        image_field: artistlogo
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+      ws-artistthumb-nofade:
+        title: "Artist Thumbnail"
+        description: "Artist thumbnail image"
+        body_layout: single-image-layout
+        display_js: single-image-display
+        image_field: artistthumbnail
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+  fanart_display:
+    base: websocket-base
+    description: "Artist fanart display with static, conditional, and slideshow modes"
+    common_css:
+      - obs-compatibility
+      - image-display
+    common_websocket:
+      - fanart-streamer
+
+    templates:
+      ws-artistfanart-nofade:
+        title: "Artist Fanart"
+        description: "Full-screen artist fanart image"
+        body_layout: single-image-layout
+        display_js: single-image-display
+        image_field: artistfanart
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+      ws-artistfanart-conditional:
+        title: "Artist Fanart (Conditional)"
+        description: "Artist fanart with video detection fallback"
+        body_layout: single-image-layout
+        display_js: conditional-fanart-display
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+  fanart_slideshow:
+    base: websocket-base
+    description: "Cycling artist fanart slideshow"
+    common_css:
+      - obs-compatibility
+      - fanart-slideshow
+    common_websocket:
+      - metadata-streaming
+
+    templates:
+      ws-artistfanart-slideshow:
+        title: "Artist Fanart Slideshow"
+        description: "Cycling slideshow of artist fanart images"
+        body_layout: fanart-slideshow-layout
+        display_js: fanart-slideshow
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+  cover_display:
+    base: websocket-base
+    description: "Album cover art display, single and slideshow"
+    common_css:
+      - obs-compatibility
+      - image-display
+    common_websocket:
+      - metadata-streaming
+
+    templates:
+      ws-justthecover:
+        title: "Just the Cover"
+        description: "Album cover art only"
+        body_layout: single-image-layout
+        display_js: single-image-display
+        image_field: coverimage
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+  cover_slideshow:
+    base: websocket-base
+    description: "Album cover slideshow display"
+    common_css:
+      - obs-compatibility
+      - coverslideshow
+    common_websocket:
+      - metadata-streaming
+
+    templates:
+      ws-coverslideshow:
+        title: "Cover Slideshow"
+        description: "Slideshow of album cover art images"
+        body_layout: coverslideshow-layout
+        display_js: coverslideshow-complex
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0

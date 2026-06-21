@@ -1,0 +1,134 @@
+# yamllint disable rule:line-length
+---
+template_families:
+  frosted_glass:
+    base: websocket-base
+    description: "Frosted glass overlay with blurred background"
+    common_css:
+      - obs-compatibility
+      - frosted-glass
+    common_websocket:
+      - metadata-streaming
+
+    templates:
+      ws-frosted-glass:
+        title: "Frosted Glass"
+        description: "Frosted glass effect titlecard"
+        body_layout: frosted-glass-layout
+        display_js: frosted-glass-display
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+  gifwords:
+    base: websocket-base
+    description: "Animated GIF background with lyrics/words display"
+    common_css:
+      - obs-compatibility
+      - gifwords-display
+    common_websocket:
+      - gifwords-streamer
+
+    templates:
+      ws-gifwords-fade:
+        title: "GIFWords"
+        description: "GIF background with fading text overlay"
+        body_layout: gifwords-layout
+        display_js: gifwords-display
+        effects:
+          - gifwords-fade-effects
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+  typing_effects:
+    base: websocket-base
+    description: "Typewriter-style animated text display"
+    external_js:
+      - "vendor/typed.min.js"
+    common_css:
+      - obs-compatibility
+      - typing_effects
+    common_websocket:
+      - metadata-streaming
+
+    templates:
+      ws-typing-classic:
+        title: "Typing Classic"
+        description: "Classic typewriter effect on paper"
+        body_layout: typing_layout
+        display_js: typed_effects
+        body_class: typewriter-style
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+      ws-typing-amber:
+        title: "Typing Amber"
+        description: "Amber terminal typing effect"
+        body_layout: typing_layout
+        display_js: typed_effects
+        body_class: amber-style
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+      ws-typing-terminal:
+        title: "Typing Terminal"
+        description: "Terminal-style typing effect with mistakes"
+        body_layout: typing_layout
+        display_js: typed_effects
+        body_class: terminal-style
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+  matrix_rain:
+    base: websocket-base
+    description: "Matrix digital rain with scrolling text"
+    common_css:
+      - obs-compatibility
+      - matrix-rain
+    common_websocket:
+      - metadata-streaming
+
+    templates:
+      ws-typing-matrix:
+        title: "Typing Matrix"
+        description: "Matrix digital rain effect"
+        body_layout: matrix-rain-layout
+        display_js: matrix-rain
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
+
+  requests:
+    base: websocket-base
+    description: "Track request display overlay"
+    common_css:
+      - obs-compatibility
+    common_websocket:
+      - metadata-streaming
+
+    templates:
+      ws-requests:
+        title: "Requests"
+        description: "Track request display"
+        body_layout: basic-text-layout
+        display_js: basic-text-display
+        effects: []
+        timing_defaults:
+          hide_after: 0
+          repeat_animation: 0
+          delay_update: 0
