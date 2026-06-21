@@ -284,7 +284,7 @@ class TemplateBuilder:
 
     def setup_vendor_files(self) -> None:
         """Download and setup vendor JavaScript files"""
-        vendor_config_file = Path("src/wnp_templates/vendor.yaml")
+        vendor_config_file = self.vendor_dir.parent / "vendor.yaml"
         vendor_cache_dir = self.src_dir / "vendor"
         vendor_out_dir = self.vendor_dir
 

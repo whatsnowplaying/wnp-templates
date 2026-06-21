@@ -21,11 +21,18 @@ def _load_vendor_files() -> dict[str, str]:
     """Return filename → URL map from the packaged vendor.yaml."""
     if not _VENDOR_YAML.exists():
         return {}
-    data = yaml.safe_load(_VENDOR_YAML.read_text(encoding="utf-8"))
-    return {
-        filename: info["url"]
-        for filename, info in data.get("vendor_dependencies", {}).items()
-    }
+    try:
+        data = yaml.safe_load(_VENDOR_YAML.read_text(encoding="utf-8"))
+        if not isinstance(data, dict):
+            return {}
+        return {
+            filename: info["url"]
+            for filename, info in data.get("vendor_dependencies", {}).items()
+            if isinstance(info, dict) and info.get("url")
+        }
+    except Exception:  # pylint: disable=broad-exception-caught
+        logging.warning("Failed to load vendor.yaml from %s", _VENDOR_YAML)
+        return {}
 
 
 VENDOR_FILES: dict[str, str] = _load_vendor_files()
