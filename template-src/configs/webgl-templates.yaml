@@ -1,6 +1,7 @@
 ---
 template_families:
   webgl_vinyl:
+    label: "WebGL"
     base: webgl-base
     description: "WebGL-rendered spinning vinyl record with cover art texture"
     common_css:
@@ -14,6 +15,7 @@ template_families:
 
     templates:
       ws-webgl-vinyl:
+        effect_label: "Vinyl"
         title: "WebGL Vinyl"
         description: "Spinning vinyl record with cover art and track info"
         body_layout: webgl-vinyl-layout
@@ -25,6 +27,7 @@ template_families:
           delay_update: 0
 
   webgl_spectrum:
+    label: "WebGL"
     base: webgl-base
     description: "WebGL animated EQ spectrum bars lower-third"
     common_css:
@@ -38,6 +41,7 @@ template_families:
 
     templates:
       ws-webgl-spectrum:
+        effect_label: "Spectrum"
         title: "WebGL Spectrum"
         description: "Animated EQ bars with artist and title overlay"
         body_layout: webgl-spectrum-layout
@@ -48,6 +52,7 @@ template_families:
           delay_update: 0
 
   webgl_hologram:
+    label: "WebGL"
     base: webgl-base
     description: "WebGL scanline hologram panel with glitch text reveal"
     common_css:
@@ -61,6 +66,7 @@ template_families:
 
     templates:
       ws-webgl-hologram:
+        effect_label: "Hologram"
         title: "WebGL Hologram"
         description: "Cyberpunk scanline panel with glitch text reveal on track
           change"
@@ -72,6 +78,7 @@ template_families:
           delay_update: 0
 
   webgl_wave:
+    label: "WebGL"
     base: webgl-base
     description: "WebGL panel with animated wavy top edge and glow line"
     common_css:
@@ -85,6 +92,7 @@ template_families:
 
     templates:
       ws-webgl-wave:
+        effect_label: "Wave"
         title: "WebGL Wave"
         description: "Dark panel with animated wavy top boundary and glow edge"
         body_layout: webgl-wave-layout
@@ -95,6 +103,7 @@ template_families:
           delay_update: 0
 
   canvas_particles:
+    label: "Canvas"
     base: webgl-base
     description: "Canvas 2D floating particles over transparent stream background"
     common_css:
@@ -106,6 +115,7 @@ template_families:
 
     templates:
       ws-canvas-particles:
+        effect_label: "Particles"
         title: "Canvas Particles"
         description: "Floating particles over the stream with text overlay, no
           panel"
@@ -117,6 +127,7 @@ template_families:
           delay_update: 0
 
   webgl_cube:
+    label: "WebGL"
     base: webgl-base
     description: "Rotating 3D cube textured with artist fanart images"
     common_css:
@@ -130,6 +141,7 @@ template_families:
 
     templates:
       ws-webgl-cube:
+        effect_label: "Cube"
         title: "WebGL Fanart Cube"
         description: "Rotating 3D cube with artist fanart on each face,
           falls back to cover art"

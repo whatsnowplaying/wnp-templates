@@ -2,6 +2,7 @@
 ---
 template_families:
   basic_text:
+    label: "Basic Text"
     base: websocket-base
     description: "Basic text display with optional animation effects"
     external_js:
@@ -15,6 +16,7 @@ template_families:
 
     templates:
       ws-basic-text:
+        effect_label: "None"
         title: "Basic Text"
         description: "Simple text titlecard"
         body_layout: basic-text-layout
@@ -25,6 +27,7 @@ template_families:
           delay_update: 0
 
       ws-basic-text-fade:
+        effect_label: "Fade"
         title: "Basic Text"
         description: "Simple text titlecard with fade"
         body_layout: basic-text-layout
@@ -36,6 +39,7 @@ template_families:
           delay_update: 0
 
       ws-basic-text-explode:
+        effect_label: "Explode"
         title: "Basic Text"
         description: "Simple text titlecard with explode effect"
         body_layout: basic-text-layout
@@ -47,6 +51,7 @@ template_families:
           delay_update: 0
 
       ws-basic-text-spin:
+        effect_label: "Spin"
         title: "Basic Text"
         description: "Simple text titlecard with spin effect"
         body_layout: basic-text-layout
@@ -58,6 +63,7 @@ template_families:
           delay_update: 0
 
       ws-basic-text-slide:
+        effect_label: "Slide"
         title: "Basic Text"
         description: "Simple text titlecard with slide effect"
         body_layout: basic-text-layout
@@ -69,6 +75,7 @@ template_families:
           delay_update: 0
 
       ws-basic-text-anime-elastic:
+        effect_label: "Anime Elastic"
         title: "Basic Text"
         description: "Simple text titlecard with elastic animation"
         body_layout: basic-text-layout
@@ -80,6 +87,7 @@ template_families:
           delay_update: 0
 
       ws-basic-text-anime-bounce:
+        effect_label: "Anime Bounce"
         title: "Basic Text"
         description: "Simple text titlecard with bounce animation"
         body_layout: basic-text-layout
@@ -91,6 +99,7 @@ template_families:
           delay_update: 0
 
       ws-basic-text-anime-stagger:
+        effect_label: "Anime Stagger"
         title: "Basic Text"
         description: "Simple text titlecard with stagger animation"
         body_layout: basic-text-layout
@@ -102,6 +111,7 @@ template_families:
           delay_update: 0
 
   generic_dj:
+    label: "Generic DJ"
     base: websocket-base
     description: "Generic DJ titlecard with album art and accent color"
     common_css:
@@ -113,6 +123,7 @@ template_families:
 
     templates:
       ws-generic-dj:
+        effect_label: "None"
         title: "Generic DJ"
         description: "DJ titlecard with album art, accent divider, and text"
         body_layout: generic-dj-layout

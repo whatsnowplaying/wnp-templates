@@ -21,3 +21,6 @@ venv/
 # Editor artifacts
 .DS_Store
 *.swp
+
+# Generated family registry (by build_templates.py)
+src/wnp_templates/families.yaml

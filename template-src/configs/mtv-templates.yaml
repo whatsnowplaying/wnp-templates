@@ -1,6 +1,7 @@
 ---
 template_families:
   mtv_style:
+    label: "MTV"
     base: websocket-base
     description: "MTV-style layouts with customizable fade effects"
     common_css:
@@ -13,6 +14,7 @@ template_families:
 
     templates:
       ws-mtv:
+        effect_label: "None"
         title: "Titlecard"
         description: "MTV Style"
         body_layout: mtv-text-layout
@@ -24,6 +26,7 @@ template_families:
           delay_update: 0
 
       ws-mtv-fade:
+        effect_label: "Fade"
         title: "Titlecard"
         description: "MTV Style - Fade Effects"
         body_layout: mtv-text-layout
