@@ -2,6 +2,7 @@
 ---
 template_families:
   artist_images:
+    label: "Artist Images"
     base: websocket-base
     description: "Single artist image display (banner, logo, thumbnail)"
     common_css:
@@ -12,6 +13,7 @@ template_families:
 
     templates:
       ws-artistbanner-nofade:
+        effect_label: "Banner"
         title: "Artist Banner"
         description: "Full-width artist banner image"
         body_layout: single-image-layout
@@ -24,6 +26,7 @@ template_families:
           delay_update: 0
 
       ws-artistlogo-nofade:
+        effect_label: "Logo"
         title: "Artist Logo"
         description: "Artist logo image"
         body_layout: single-image-layout
@@ -36,6 +39,7 @@ template_families:
           delay_update: 0
 
       ws-artistthumb-nofade:
+        effect_label: "Thumbnail"
         title: "Artist Thumbnail"
         description: "Artist thumbnail image"
         body_layout: single-image-layout
@@ -48,6 +52,7 @@ template_families:
           delay_update: 0
 
   fanart_display:
+    label: "Artist Fanart"
     base: websocket-base
     description: "Artist fanart display with static, conditional, and slideshow modes"
     common_css:
@@ -58,6 +63,7 @@ template_families:
 
     templates:
       ws-artistfanart-nofade:
+        effect_label: "None"
         title: "Artist Fanart"
         description: "Full-screen artist fanart image"
         body_layout: single-image-layout
@@ -70,6 +76,7 @@ template_families:
           delay_update: 0
 
       ws-artistfanart-conditional:
+        effect_label: "Conditional"
         title: "Artist Fanart (Conditional)"
         description: "Artist fanart with video detection fallback"
         body_layout: single-image-layout
@@ -81,6 +88,7 @@ template_families:
           delay_update: 0
 
   fanart_slideshow:
+    label: "Artist Fanart"
     base: websocket-base
     description: "Cycling artist fanart slideshow"
     common_css:
@@ -91,6 +99,7 @@ template_families:
 
     templates:
       ws-artistfanart-slideshow:
+        effect_label: "Slideshow"
         title: "Artist Fanart Slideshow"
         description: "Cycling slideshow of artist fanart images"
         body_layout: fanart-slideshow-layout
@@ -102,6 +111,7 @@ template_families:
           delay_update: 0
 
   cover_display:
+    label: "Cover Art"
     base: websocket-base
     description: "Album cover art display, single and slideshow"
     common_css:
@@ -112,6 +122,7 @@ template_families:
 
     templates:
       ws-justthecover:
+        effect_label: "None"
         title: "Just the Cover"
         description: "Album cover art only"
         body_layout: single-image-layout
@@ -124,6 +135,7 @@ template_families:
           delay_update: 0
 
   cover_slideshow:
+    label: "Cover Art"
     base: websocket-base
     description: "Album cover slideshow display"
     common_css:
@@ -134,6 +146,7 @@ template_families:
 
     templates:
       ws-coverslideshow:
+        effect_label: "Slideshow"
         title: "Cover Slideshow"
         description: "Slideshow of album cover art images"
         body_layout: coverslideshow-layout

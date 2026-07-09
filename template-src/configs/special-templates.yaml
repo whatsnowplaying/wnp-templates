@@ -2,6 +2,7 @@
 ---
 template_families:
   frosted_glass:
+    label: "Frosted Glass"
     base: websocket-base
     description: "Frosted glass overlay with blurred background"
     common_css:
@@ -12,6 +13,7 @@ template_families:
 
     templates:
       ws-frosted-glass:
+        effect_label: "None"
         title: "Frosted Glass"
         description: "Frosted glass effect titlecard"
         body_layout: frosted-glass-layout
@@ -23,6 +25,7 @@ template_families:
           delay_update: 0
 
   gifwords:
+    label: "GIFWords"
     base: websocket-base
     description: "Animated GIF background with lyrics/words display"
     common_css:
@@ -33,6 +36,7 @@ template_families:
 
     templates:
       ws-gifwords-fade:
+        effect_label: "Fade"
         title: "GIFWords"
         description: "GIF background with fading text overlay"
         body_layout: gifwords-layout
@@ -45,6 +49,7 @@ template_families:
           delay_update: 0
 
   typing_effects:
+    label: "Typing"
     base: websocket-base
     description: "Typewriter-style animated text display"
     external_js:
@@ -57,6 +62,7 @@ template_families:
 
     templates:
       ws-typing-classic:
+        effect_label: "Classic"
         title: "Typing Classic"
         description: "Classic typewriter effect on paper"
         body_layout: typing_layout
@@ -69,6 +75,7 @@ template_families:
           delay_update: 0
 
       ws-typing-amber:
+        effect_label: "Amber"
         title: "Typing Amber"
         description: "Amber terminal typing effect"
         body_layout: typing_layout
@@ -81,6 +88,7 @@ template_families:
           delay_update: 0
 
       ws-typing-terminal:
+        effect_label: "Terminal"
         title: "Typing Terminal"
         description: "Terminal-style typing effect with mistakes"
         body_layout: typing_layout
@@ -93,6 +101,7 @@ template_families:
           delay_update: 0
 
   matrix_rain:
+    label: "Typing"
     base: websocket-base
     description: "Matrix digital rain with scrolling text"
     common_css:
@@ -103,6 +112,7 @@ template_families:
 
     templates:
       ws-typing-matrix:
+        effect_label: "Matrix"
         title: "Typing Matrix"
         description: "Matrix digital rain effect"
         body_layout: matrix-rain-layout
@@ -114,6 +124,7 @@ template_families:
           delay_update: 0
 
   requests:
+    label: "Requests"
     base: websocket-base
     description: "Track request display overlay"
     common_css:
@@ -123,6 +134,7 @@ template_families:
 
     templates:
       ws-requests:
+        effect_label: "None"
         title: "Requests"
         description: "Track request display"
         body_layout: basic-text-layout
