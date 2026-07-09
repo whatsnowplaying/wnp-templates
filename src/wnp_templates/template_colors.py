@@ -23,16 +23,20 @@ def _load_vendor_files() -> dict[str, str]:
         return {}
     try:
         data = yaml.safe_load(_VENDOR_YAML.read_text(encoding="utf-8"))
-        if not isinstance(data, dict):
-            return {}
-        return {
-            filename: info["url"]
-            for filename, info in data.get("vendor_dependencies", {}).items()
-            if isinstance(info, dict) and info.get("url")
-        }
-    except Exception:  # pylint: disable=broad-exception-caught
-        logging.warning("Failed to load vendor.yaml from %s", _VENDOR_YAML)
+    except (OSError, yaml.YAMLError):
+        logging.exception("Failed to load vendor.yaml from %s", _VENDOR_YAML)
         return {}
+    if not isinstance(data, dict) or not isinstance(data.get("vendor_dependencies"), dict):
+        logging.warning(
+            "vendor.yaml has invalid schema (expected mapping with 'vendor_dependencies'): %s",
+            _VENDOR_YAML,
+        )
+        return {}
+    return {
+        filename: info["url"]
+        for filename, info in data["vendor_dependencies"].items()
+        if isinstance(info, dict) and info.get("url")
+    }
 
 
 VENDOR_FILES: dict[str, str] = _load_vendor_files()
@@ -101,19 +105,24 @@ def _load_families() -> tuple[dict[str, dict[str, str]], dict[str, str]]:
         return {}, {}
     try:
         data = yaml.safe_load(_FAMILIES_YAML.read_text(encoding="utf-8"))
-        if not isinstance(data, dict):
-            return {}, {}
-        families: dict[str, dict[str, str]] = {}
-        descriptions: dict[str, str] = {}
-        for label, info in data.get("families", {}).items():
-            if not isinstance(info, dict) or not isinstance(info.get("templates"), dict):
-                continue
-            families[label] = dict(info["templates"])
-            descriptions[label] = str(info.get("description", ""))
-        return families, descriptions
-    except Exception:  # pylint: disable=broad-exception-caught
-        logging.warning("Failed to load families.yaml from %s", _FAMILIES_YAML)
+    except (OSError, yaml.YAMLError):
+        logging.exception("Failed to load families.yaml from %s", _FAMILIES_YAML)
         return {}, {}
+    if not isinstance(data, dict) or not isinstance(data.get("families"), dict):
+        logging.warning(
+            "families.yaml has invalid schema (expected mapping with 'families' key): %s",
+            _FAMILIES_YAML,
+        )
+        return {}, {}
+    families: dict[str, dict[str, str]] = {}
+    descriptions: dict[str, str] = {}
+    for label, info in data["families"].items():
+        if not isinstance(info, dict) or not isinstance(info.get("templates"), dict):
+            logging.warning("families.yaml entry %r has invalid schema, skipping", label)
+            continue
+        families[label] = dict(info["templates"])
+        descriptions[label] = str(info.get("description", ""))
+    return families, descriptions
 
 
 # Family name → ordered dict of effect_label → template_stem
