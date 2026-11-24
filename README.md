@@ -46,7 +46,6 @@ html = wnp_templates.assemble_named_template(
 |---|---|
 | Basic Text | None, Fade, Explode, Spin, Slide, Anime Elastic, Anime Bounce, Anime Stagger |
 | Generic DJ | None |
-| MTV | None, Fade |
 | WebGL | Cube, Hologram, Spectrum, Vinyl, Wave |
 | Canvas | Particles |
 
