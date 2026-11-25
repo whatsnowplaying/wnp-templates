@@ -312,12 +312,14 @@ class TemplateBuilder:
     def download_vendor_file(
         filename: str, url: str, vendor_cache_dir: Path, vendor_out_dir: Path
     ) -> None:
-        """Download a vendor file if it doesn't exist in cache"""
+        """Download a vendor file unless the cache holds it from the same URL"""
         cache_file = vendor_cache_dir / filename
+        url_file = vendor_cache_dir / f"{filename}.url"
         output_file = vendor_out_dir / filename
 
-        # Check if file exists in cache
-        if not cache_file.exists():
+        # a version bump changes the URL but not the filename
+        cached_url = url_file.read_text(encoding="utf-8") if url_file.exists() else None
+        if not cache_file.exists() or cached_url != url:
             print(f"    Downloading {filename} from {url}")
             try:
                 req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -328,6 +330,7 @@ class TemplateBuilder:
                 raise RuntimeError(
                     f"Failed to download {filename} from {url}: {download_err}"
                 ) from download_err
+            url_file.write_text(url, encoding="utf-8")
         else:
             print(f"    Using cached: {cache_file}")
 
@@ -359,10 +362,9 @@ class TemplateBuilder:
 
         for filename, info in dependencies.items():
             url = info["url"]
-            version = info.get("version", "unknown")
             description = info.get("description", filename)
 
-            print(f"Processing {description} v{version}")
+            print(f"Processing {description}")
             self.download_vendor_file(filename, url, vendor_cache_dir, vendor_out_dir)
 
     def copy_vendor_files(self) -> None:
