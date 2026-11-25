@@ -3,50 +3,40 @@
 vendor_dependencies:
   jquery.min.js:
     url: "https://code.jquery.com/jquery-3.7.1.min.js"
-    version: "3.7.1"
     description: "jQuery JavaScript library"
 
   anime.min.js:
     url: "https://cdn.jsdelivr.net/npm/animejs@4.1.1/lib/anime.iife.min.js"
-    version: "4.1.1"
     description: "Anime.js animation library (IIFE version)"
 
   typed.min.js:
     url: "https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"
-    version: "2.1.0"
     description: "Typed.js - A JavaScript library for creating typewriter effects"
 
   bebas-neue.woff2:
-    url: "https://fonts.gstatic.com/s/bebasneue/v16/JTUSjIg69CK48gW7PXoo9WlhyyTh89Y.woff2"
-    version: "16"
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/bebas-neue@5.3.0/files/bebas-neue-latin-400-normal.woff2"
     description: "Bebas Neue (broadcast/display font)"
 
   orbitron.woff2:
-    url: "https://fonts.gstatic.com/s/orbitron/v35/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6BoWgzfDAlp7lk.woff2"
-    version: "35"
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/orbitron@5.3.0/files/orbitron-latin-400-normal.woff2"
     description: "Orbitron (electronic/futuristic font)"
 
   rajdhani.woff2:
-    url: "https://fonts.gstatic.com/s/rajdhani/v17/LDIxapCSOBg7S-QT7p4HM-aGW-rO.woff2"
-    version: "17"
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/rajdhani@5.3.0/files/rajdhani-latin-400-normal.woff2"
     description: "Rajdhani (techy/modern font)"
 
   montserrat.woff2:
-    url: "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXp-p7K4KLg.woff2"
-    version: "31"
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/montserrat@5.3.0/files/montserrat-latin-400-normal.woff2"
     description: "Montserrat (clean modern font)"
 
   heebo.woff2:
-    url: "https://fonts.gstatic.com/s/heebo/v28/NGSpv5_NC0k9P_v6ZUCbLRAHxK1EiSysdUmm7UiCXB5W.woff2"
-    version: "28"
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/heebo@5.3.0/files/heebo-latin-400-normal.woff2"
     description: "Heebo (clean workhorse font)"
 
   rubik.woff2:
-    url: "https://fonts.gstatic.com/s/rubik/v31/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-B4iFV0U1dYPFkZVO.woff2"
-    version: "31"
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/rubik@5.3.0/files/rubik-latin-400-normal.woff2"
     description: "Rubik (friendly rounded font)"
 
   playfair-display.woff2:
-    url: "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtPK-F2qC0s.woff2"
-    version: "40"
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.3.0/files/playfair-display-latin-400-normal.woff2"
     description: "Playfair Display (elegant serif font)"

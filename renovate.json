@@ -2,5 +2,38 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "npm packages served by jsDelivr in vendor.yaml",
+      "managerFilePatterns": [
+        "/(^|/)vendor\\.yaml$/"
+      ],
+      "matchStrings": [
+        "https://cdn\\.jsdelivr\\.net/npm/(?<depName>(@[^/@\"]+/)?[^/@\"]+)@(?<currentValue>[^/\"]+)/"
+      ],
+      "datasourceTemplate": "npm"
+    },
+    {
+      "customType": "regex",
+      "description": "jQuery from code.jquery.com in vendor.yaml",
+      "managerFilePatterns": [
+        "/(^|/)vendor\\.yaml$/"
+      ],
+      "matchStrings": [
+        "https://code\\.jquery\\.com/jquery-(?<currentValue>\\d+\\.\\d+\\.\\d+)\\.min\\.js"
+      ],
+      "depNameTemplate": "jquery",
+      "datasourceTemplate": "npm"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "@fontsource/**"
+      ],
+      "groupName": "fontsource fonts"
+    }
   ]
 }

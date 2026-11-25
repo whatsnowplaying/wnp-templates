@@ -359,10 +359,9 @@ class TemplateBuilder:
 
         for filename, info in dependencies.items():
             url = info["url"]
-            version = info.get("version", "unknown")
             description = info.get("description", filename)
 
-            print(f"Processing {description} v{version}")
+            print(f"Processing {description}")
             self.download_vendor_file(filename, url, vendor_cache_dir, vendor_out_dir)
 
     def copy_vendor_files(self) -> None:
