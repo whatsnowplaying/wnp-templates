@@ -17,6 +17,10 @@ vendor_dependencies:
     url: "https://cdn.jsdelivr.net/npm/@fontsource/bebas-neue@5.3.0/files/bebas-neue-latin-400-normal.woff2"
     description: "Bebas Neue (broadcast/display font)"
 
+  bebas-neue-latin-ext.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/bebas-neue@5.3.0/files/bebas-neue-latin-ext-400-normal.woff2"
+    description: "Bebas Neue latin-ext subset"
+
   orbitron.woff2:
     url: "https://cdn.jsdelivr.net/npm/@fontsource/orbitron@5.3.0/files/orbitron-latin-400-normal.woff2"
     description: "Orbitron (electronic/futuristic font)"
@@ -25,18 +29,90 @@ vendor_dependencies:
     url: "https://cdn.jsdelivr.net/npm/@fontsource/rajdhani@5.3.0/files/rajdhani-latin-400-normal.woff2"
     description: "Rajdhani (techy/modern font)"
 
+  rajdhani-devanagari.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/rajdhani@5.3.0/files/rajdhani-devanagari-400-normal.woff2"
+    description: "Rajdhani devanagari subset"
+
+  rajdhani-latin-ext.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/rajdhani@5.3.0/files/rajdhani-latin-ext-400-normal.woff2"
+    description: "Rajdhani latin-ext subset"
+
   montserrat.woff2:
     url: "https://cdn.jsdelivr.net/npm/@fontsource/montserrat@5.3.0/files/montserrat-latin-400-normal.woff2"
     description: "Montserrat (clean modern font)"
+
+  montserrat-cyrillic-ext.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/montserrat@5.3.0/files/montserrat-cyrillic-ext-400-normal.woff2"
+    description: "Montserrat cyrillic-ext subset"
+
+  montserrat-cyrillic.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/montserrat@5.3.0/files/montserrat-cyrillic-400-normal.woff2"
+    description: "Montserrat cyrillic subset"
+
+  montserrat-vietnamese.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/montserrat@5.3.0/files/montserrat-vietnamese-400-normal.woff2"
+    description: "Montserrat vietnamese subset"
+
+  montserrat-latin-ext.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/montserrat@5.3.0/files/montserrat-latin-ext-400-normal.woff2"
+    description: "Montserrat latin-ext subset"
 
   heebo.woff2:
     url: "https://cdn.jsdelivr.net/npm/@fontsource/heebo@5.3.0/files/heebo-latin-400-normal.woff2"
     description: "Heebo (clean workhorse font)"
 
+  heebo-hebrew.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/heebo@5.3.0/files/heebo-hebrew-400-normal.woff2"
+    description: "Heebo hebrew subset"
+
+  heebo-math.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/heebo@5.3.0/files/heebo-math-400-normal.woff2"
+    description: "Heebo math subset"
+
+  heebo-symbols.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/heebo@5.3.0/files/heebo-symbols-400-normal.woff2"
+    description: "Heebo symbols subset"
+
+  heebo-latin-ext.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/heebo@5.3.0/files/heebo-latin-ext-400-normal.woff2"
+    description: "Heebo latin-ext subset"
+
   rubik.woff2:
     url: "https://cdn.jsdelivr.net/npm/@fontsource/rubik@5.3.0/files/rubik-latin-400-normal.woff2"
     description: "Rubik (friendly rounded font)"
 
+  rubik-arabic.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/rubik@5.3.0/files/rubik-arabic-400-normal.woff2"
+    description: "Rubik arabic subset"
+
+  rubik-cyrillic-ext.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/rubik@5.3.0/files/rubik-cyrillic-ext-400-normal.woff2"
+    description: "Rubik cyrillic-ext subset"
+
+  rubik-cyrillic.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/rubik@5.3.0/files/rubik-cyrillic-400-normal.woff2"
+    description: "Rubik cyrillic subset"
+
+  rubik-hebrew.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/rubik@5.3.0/files/rubik-hebrew-400-normal.woff2"
+    description: "Rubik hebrew subset"
+
+  rubik-latin-ext.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/rubik@5.3.0/files/rubik-latin-ext-400-normal.woff2"
+    description: "Rubik latin-ext subset"
+
   playfair-display.woff2:
     url: "https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.3.0/files/playfair-display-latin-400-normal.woff2"
     description: "Playfair Display (elegant serif font)"
+
+  playfair-display-cyrillic.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.3.0/files/playfair-display-cyrillic-400-normal.woff2"
+    description: "Playfair Display cyrillic subset"
+
+  playfair-display-vietnamese.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.3.0/files/playfair-display-vietnamese-400-normal.woff2"
+    description: "Playfair Display vietnamese subset"
+
+  playfair-display-latin-ext.woff2:
+    url: "https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.3.0/files/playfair-display-latin-ext-400-normal.woff2"
+    description: "Playfair Display latin-ext subset"

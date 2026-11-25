@@ -33,7 +33,10 @@
       "matchPackageNames": [
         "@fontsource/**"
       ],
-      "groupName": "fontsource fonts"
+      "groupName": "fontsource fonts",
+      "prBodyNotes": [
+        "Check the `unicode-range` values in `template-src/components/css/vendor-fonts.css` against each package's `400.css` for this version, and add or remove subsets to match."
+      ]
     }
   ]
 }
